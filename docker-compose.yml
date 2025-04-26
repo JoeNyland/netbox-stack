@@ -34,6 +34,7 @@ services:
       MEDIA_ROOT: ${MEDIA_ROOT:-/opt/netbox/netbox/media}
       METRICS_ENABLED: ${METRICS_ENABLED:-false}
       RELEASE_CHECK_URL: https://api.github.com/repos/netbox-community/netbox/releases
+      SKIP_SUPERUSER: true
     healthcheck:
       test: curl -f http://localhost:8080/login/ || exit 1
       start_period: 90s
