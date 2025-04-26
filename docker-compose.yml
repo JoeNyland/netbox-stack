@@ -48,6 +48,7 @@ services:
       - /containers/netbox/media:/opt/netbox/netbox/media
       - /containers/netbox/reports:/opt/netbox/netbox/reports
       - /containers/netbox/scripts:/opt/netbox/netbox/scripts
+      - /etc/ssl/certs/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro
   netbox-worker:
     <<: *netbox
     container_name: netbox-worker
